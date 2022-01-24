@@ -1,10 +1,6 @@
-# Calendar
-My first repository
-// C program to print the month by month
-// calendar for the given year
+
 #include <stdio.h>
-// Function that returns the index of the
-// day for date DD/MM/YYYY
+
 int dayNumber(int day, int month, int year)
 {
 	static int t[] = { 0, 3, 2, 5, 0, 3, 5, 1, 4, 6, 2, 4 };
@@ -12,9 +8,7 @@ int dayNumber(int day, int month, int year)
 	return (year + year / 4 - year / 100 + year / 400 + t[month - 1] + day) % 7;
 }
 
-// Function that returns the name of the
-// month for the given month Number
-// January - 0, February - 1 and so on
+
 char* getMonthName(int monthNumber)
 {
 	char* month;
@@ -60,8 +54,6 @@ char* getMonthName(int monthNumber)
 	return month;
 }
 
-// Function to return the number of days
-// in a month
 int numberOfDays(int monthNumber, int year)
 {
 	// January
@@ -121,8 +113,6 @@ int numberOfDays(int monthNumber, int year)
 		return (31);
 }
 
-// Function to print the calendar of
-// the given year
 void printCalendar(int year)
 {
 	printf("	 Calendar - %d\n\n", year);
